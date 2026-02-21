@@ -16,8 +16,9 @@ Assumptions:
  5. You are ok with typing 'sudo apt get' a lot of times and you don't really understand why you are doing it.
  6. You use AI. These steps will not include using AI, but I used AI (chatgpt) extensively in this process. My initial build used whatever I could find on the internet which was that awkward period where all the search engines pointed you to references that paid them money (aka, not necessarily the best sources) and AI either didn't exist or was just a novelty. AI will confidently give you incorrect information, but it will not be an a-hole and tell you to read other posts that answer the same question (I'm looking at you stackoverflow). If you get stuck, maybe try pinging an AI thingy rather than searching on the internet. At a minimum, the AI will be nice while giving you bad information rather than being a jerk about it.
 
-Hardware list, costs (at the time of purchase), link, notes:
+## Hardware list, costs (at the time of purchase), link, notes:
 | item | cost | link | notes |
+|----|------|----|----|
 | Raspberry Pi Zero 2 W | $54.99| https://www.amazon.com/dp/B09M1PS35R?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1 | I bricked my pi zero w (don't plug in a pi while it is sitting on metal), so I bought a newer model. |
 | Raspberry Pi Camera module | $29.95 | https://www.amazon.com/dp/B01ER2SKFS?ref=ppx_yo2ov_dt_b_fed_asin_title | There might be more suitable models. Also, the camera ribbon SUUUUUUCKS |
 | Raspberry Pi 5 | $179.99 | https://www.amazon.com/dp/B0CRSPKPNG?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1 | This guy does picture processsing + is my media player (kodi). My initial build used a pi 4 (sans kodi). |
