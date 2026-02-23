@@ -30,28 +30,28 @@ There are quality of life items I bought in addition to these items. The list ab
 2. The device is a Raspberry Pi Zero 2 W and you'll want the Raspberry Pi OS (32-bit) with Desktop.
 3. Make sure you select the SD card.
 4. Use the following settings (I'm doing this from memory - sorry).
- a. hostname: pick something memorable. I used piCamera.
- b. enable SSH: yes - SSH will allow you to remote in with a command line, which is really nice because then you don't have to connect a monitor and a mouse/keyboard.
- c. username: pick one and make sure you remember it.
- d. password: pick one and make sure you remember it.
- e. WiFi SSID/password: set that up so you have connectivity once it boots.
- f. Raspberry Connect - I did not enable this, but maybe I should have?
+ * a. hostname: pick something memorable. I used piCamera.
+ * b. enable SSH: yes - SSH will allow you to remote in with a command line, which is really nice because then you don't have to connect a monitor and a mouse/keyboard.
+ * c. username: pick one and make sure you remember it.
+ * d. password: pick one and make sure you remember it.
+ * e. WiFi SSID/password: set that up so you have connectivity once it boots.
+ * f. Raspberry Connect - I did not enable this, but maybe I should have?
 5. Connect the camera to the pi zero.
 6. Insert the SD card.
 7. MAKE SURE YOU DO NOT HAVE THE PI ZERO SITTING DIRECTLY ON A METAL SURFACE. Power it on.
 8. While it's booting, open a command prompt on your windows machine and spam "ping hostname". Once you get a response, you should be good to go in connecting via SSH (next step). If you installed Raspberry Connect, I suppose you could do that rather than SSH.
 9. SSH into the pi zero. Open a command prompt and type "ssh hostname". You shouldn't need to put in the username since there should only be one, but you could probably do something like "ssh username@hostname". At some point, you'll get a warning about the authenticity of the host and how it can't be established. Type yes and hit enter.
 10. Enter the password.
-11. If you mess up the password, enter it again.
+11. If you mess up the password, enter it again.* 
 12. Once in, enter the following commands to perform some kind of weird magic that seems pretty important:
- a. sudo apt update
- b. sudo apt full-upgrade -y
- c. sudo reboot
+ * a. sudo apt update
+ * b. sudo apt full-upgrade -y
+ * c. sudo reboot
 13. In your command prompt, spam "ping hostname" until it responds then ssh in again.
 14. Once you're back in, enable VNC so you can remote into the desktop. Note: this isn't necessary, but I'm a n00b, and you will need to pry my desktop from my cold dead hands. Note-note: You can probably do this via the command line, but see the previous note.
- a. Type: sudo raspi-config
- b. Use up/down arrows to select Interface Options and hit enter.
- c. Use up/down arrows to select VNC and hit enter.
- d. At "Would you like the VNC Server to be enabled?", highlight <Yes> and then hit enter.
- e. Type: sudo reboot
+ * a. Type: sudo raspi-config
+ * b. Use up/down arrows to select Interface Options and hit enter.
+ * c. Use up/down arrows to select VNC and hit enter.
+ * d. At "Would you like the VNC Server to be enabled?", highlight <Yes> and then hit enter.
+ * e. Type: sudo reboot
 15. While it's rebooting, download RealVNC Viewer for windows (https://downloads.realvnc.com/download/file/viewer.files/VNC-Viewer-7.15.1-Windows.exe?lai_vid=eebXdjBBQIm6&lai_sr=0-4&lai_sl=l). Note: You can use mstsc for windows, but I'm not sure if you can reference the pi using the hostname. This is what I used the first time I did it, but I logged in using a static IP which I configured for the old infrastructure. If you go that route instead of realVNC, you could try connecting via hostname.local. I don't think this'll work unless you install something that will do fancy pants DNS stuff (whatever that is), but it's worth a shot. Update: I tested it without the fancy pants DNS stuff and it did not work. So, realVNC it is.
